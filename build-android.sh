@@ -54,7 +54,7 @@ echo "                              ${GR}=> done.${N}" && sleep 3
 # the build a lot. If needed, just add -flto to the CFLAGS string.
 # normal build.
 echo "${LYLO}configuring.....${N}" && sleep 3
-./configure --with-crypto --with-curl --disable-assembly CC=gcc CXX=g++ CFLAGS="-Ofast -fuse-linker-plugin -ftree-loop-if-convert-stores -march=native" LDFLAGS="-march=native"
+./configure --with-crypto --with-curl --disable-assembly CC=gcc CXX=g++ CFLAGS="-OC -fuse-linker-plugin -ftree-loop-if-convert-stores -march=native" LDFLAGS="-march=native"
 [ $? = 0 ] || exit $?
 echo "                              ${GR}=> done.${N}" && sleep 3
 if [ -z "$NPROC" ]; then
